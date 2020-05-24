@@ -42,6 +42,5 @@ describe('Assigment 01 Test Suite', function(){
 
         // After-condition: user still at the log in page
         indexPageFuncs.assertLoginPageUrl(cy);
-        
     })
 })

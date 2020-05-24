@@ -2,7 +2,7 @@
 
 const loginPageUrl = 'http://localhost:3000/login';
 
-const smallContainerDiv = '#app > div';
+const smallContainerDiv = '#app > .container.small';
 
 const usernameTextfield = ':nth-child(1) > input';
 const passwordTextfield = ':nth-child(2) > input';
