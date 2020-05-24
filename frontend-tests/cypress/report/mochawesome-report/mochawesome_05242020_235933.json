@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-24T21:59:28.348Z",
+    "end": "2020-05-24T21:59:33.403Z",
+    "duration": 5055,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4cbcf105-c6df-4943-b1ab-55501922d720",
+      "title": "",
+      "fullFile": "cypress/integration/vrt.spec.js",
+      "file": "cypress/integration/vrt.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a7366d35-4233-4dca-bba7-5b233d33c704",
+          "title": "Visual Regression Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC 3: Navigation test from the Overview page",
+              "fullTitle": "Visual Regression Test Suite TC 3: Navigation test from the Overview page",
+              "timedOut": null,
+              "duration": 4004,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(target.applicationUrl); // Screeenshot 1\ncy.percySnapshot('LOGIN_PAGE'); // Perform login attempt using correct data \nindexPageFuncs.attemptLogin(cy, loginData.username, loginData.correctPassword);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Screenshot 2\ncy.percySnapshot('OVERVIEW_PAGE'); // Navigate to Rooms page    \noverviewPageFuncs.navigateToRoomsPage(cy);\nroomsPageFuncs.assertRoomsPageUrl(cy); // Screenshot 3\ncy.percySnapshot('ROOMS_PAGE'); // Return to overview page\nroomsPageFuncs.clickBtnBackToOverviewPage(cy);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Navigate to Bills page\noverviewPageFuncs.navigateToBillsPage(cy);\nbillsPageFuncs.assertBillsPageUrl(cy); // Screenshot 4\ncy.percySnapshot('BILLS_PAGE'); // Return to overview\nbillsPageFuncs.clickBtnBackToOverviewPage(cy);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Added log-out to create an end to the test case\noverviewPageFuncs.attemptLogout(cy, loginData.url);\nindexPageFuncs.assertLoginPageUrl(cy); // Screenshot 5\ncy.percySnapshot('SUCCESSFUL_LOGOUT_PAGE');",
+              "err": {},
+              "uuid": "7fd56ba5-009a-475a-94f1-95a392e7b624",
+              "parentUUID": "a7366d35-4233-4dca-bba7-5b233d33c704",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7fd56ba5-009a-475a-94f1-95a392e7b624"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4004,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

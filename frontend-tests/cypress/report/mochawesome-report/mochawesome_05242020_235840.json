@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-05-24T21:58:32.203Z",
+    "end": "2020-05-24T21:58:40.316Z",
+    "duration": 8113,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3972a82a-8d98-4729-a52e-e3f817baf8f9",
+      "title": "",
+      "fullFile": "cypress/integration/vrt.spec.js",
+      "file": "cypress/integration/vrt.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "118b7228-a9f6-4fc9-a894-4fc7fd11940f",
+          "title": "Visual Regression Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC 3: Navigation test from the Overview page",
+              "fullTitle": "Visual Regression Test Suite TC 3: Navigation test from the Overview page",
+              "timedOut": null,
+              "duration": 7066,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(target.applicationUrl); // Screeenshot 1\ncy.percySnapshot('LOGIN_PAGE'); // Perform login attempt using correct data \nindexPageFuncs.attemptLogin(cy, loginData.username, loginData.correctPassword);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Screenshot 2\ncy.percySnapshot('OVERVIEW_PAGE'); // Navigate to Rooms page    \noverviewPageFuncs.navigateToRoomsPage(cy);\nroomsPageFuncs.assertRoomsPageUrl(cy); // Screenshot 3\ncy.percySnapshot('ROOMS_PAGE'); // Return to overview page\nroomsPageFuncs.clickBtnBackToOverviewPage(cy);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Navigate to Bills page\noverviewPageFuncs.navigateToBillsPage(cy);\nbillsPageFuncs.assertBillsPageUrl(cy); // Screenshot 4\ncy.percySnapshot('BILLS_PAGE'); // Return to overview\nbillsPageFuncs.clickBtnBackToOverviewPage(cy);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Added log-out to create an end to the test case\noverviewPageFuncs.attemptLogout(cy, loginData.url);\nindexPageFuncs.assertLoginPageUrl(cy); // Screenshot 5\ncy.percySnapshot('SUCCESSFUL_LOGOUT_PAGE');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: expected 'http://localhost:3000/' to equal 'http://localhost:3000/bills'",
+                "estack": "AssertionError: Timed out retrying: expected 'http://localhost:3000/' to equal 'http://localhost:3000/bills'\n    at Object.assertBillsPageUrl (http://localhost:3000/__cypress/tests?p=cypress/integration/vrt.spec.js:92:12)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/vrt.spec.js:69:20)",
+                "diff": "- 'http://localhost:3000/'\n+ 'http://localhost:3000/bills'\n"
+              },
+              "uuid": "3edbe45a-f9e5-416d-9b0d-51f23b62df79",
+              "parentUUID": "118b7228-a9f6-4fc9-a894-4fc7fd11940f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3edbe45a-f9e5-416d-9b0d-51f23b62df79"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7066,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

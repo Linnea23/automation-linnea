@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-05-24T21:48:22.383Z",
+    "end": "2020-05-24T21:48:23.286Z",
+    "duration": 903,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d39c997f-cc33-472f-b39f-6762ad56cd14",
+      "title": "",
+      "fullFile": "cypress/integration/vrt.spec.js",
+      "file": "cypress/integration/vrt.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a3a556f-7499-4b9f-86ec-cf8e32971bcc",
+          "title": "Visual Regression Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC 3: Navigation test from the Overview page",
+              "fullTitle": "Visual Regression Test Suite TC 3: Navigation test from the Overview page",
+              "timedOut": null,
+              "duration": 825,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(target.applicationUrl); // Screeenshot 1\ncy.percySnapshot('LOGIN_PAGE'); // Perform login attempt using correct data \nindexPageFuncs.attemptLogin(cy, loginData.username, loginData.correctPassword);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Screenshot 2\ncy.percySnapshot('OVERVIEW_PAGE'); // Navigate to Rooms page    \noverviewPageFuncs.navigateToRoomsPage(cy);\nroomsPageFuncs.assertRoomsPageUrl(cy); // Screenshot 3\ncy.percySnapshot('ROOMS_PAGE'); // Return to overview page\nroomsPageFuncs.clickBtnBackToOverviewPage(cy);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Navigate to Bills page\noverviewPageFuncs.navigateToBillsPage(cy);\nbillsPageFuncs.assertBillsPageUrl(cy); // Screenshot 4\ncy.percySnapshot('BILLS_PAGE'); // Return to overview\nbillsPageFuncs.clickBtnBackToOverviewPage(cy);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Added log-out to create an end to the test case\noverviewPageFuncs.attemptLogout(cy, loginData.url);\nindexPageFuncs.assertLoginPageUrl(cy); // Screenshot 5\ncy.percySnapshot('SUCCESSFUL_LOGOUT_PAGE');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:41887/__cypress/runner/cypress_runner.js:145388:23\n    at visitFailedByErr (http://localhost:41887/__cypress/runner/cypress_runner.js:144763:12)\n    at http://localhost:41887/__cypress/runner/cypress_runner.js:145387:11\n    at tryCatcher (http://localhost:41887/__cypress/runner/cypress_runner.js:10384:23)\n    at Promise._settlePromiseFromHandler (http://localhost:41887/__cypress/runner/cypress_runner.js:8319:31)\n    at Promise._settlePromise (http://localhost:41887/__cypress/runner/cypress_runner.js:8376:18)\n    at Promise._settlePromise0 (http://localhost:41887/__cypress/runner/cypress_runner.js:8421:10)\n    at Promise._settlePromises (http://localhost:41887/__cypress/runner/cypress_runner.js:8497:18)\n    at _drainQueueStep (http://localhost:41887/__cypress/runner/cypress_runner.js:5091:12)\n    at _drainQueue (http://localhost:41887/__cypress/runner/cypress_runner.js:5084:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:41887/__cypress/runner/cypress_runner.js:5100:5)\n    at Async.drainQueues (http://localhost:41887/__cypress/runner/cypress_runner.js:4970:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:41887/__cypress/tests?p=cypress/integration/vrt.spec.js:51:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:3000\n      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1128:14)\n  ",
+                "diff": null
+              },
+              "uuid": "f3b3e9e1-f7c9-4769-bbdb-f27967c31899",
+              "parentUUID": "1a3a556f-7499-4b9f-86ec-cf8e32971bcc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f3b3e9e1-f7c9-4769-bbdb-f27967c31899"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 825,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
