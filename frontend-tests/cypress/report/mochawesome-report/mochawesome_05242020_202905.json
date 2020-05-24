@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-24T18:29:01.529Z",
+    "end": "2020-05-24T18:29:05.849Z",
+    "duration": 4320,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f39993ca-619b-4c54-89f6-c1a6e519e04b",
+      "title": "",
+      "fullFile": "cypress/integration/test-suite1.spec.js",
+      "file": "cypress/integration/test-suite1.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca69ec88-8d7f-4ae0-96f8-4e02f6b58c80",
+          "title": "Assigment 01 Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC 1: Attempt login with correct user data",
+              "fullTitle": "Assigment 01 Test Suite TC 1: Attempt login with correct user data",
+              "timedOut": null,
+              "duration": 1826,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Pre-condition: browser navigated to http://localhost:3000/login\nindexPageFuncs.gotoLoginPageUrl(cy); // Perform login attempt using correct data \nindexPageFuncs.attemptLogin(cy, loginData.username, loginData.correctPassword);\noverviewPageFuncs.assertOverviewPageUrl(cy); // Added log-out to create an end to the test case\noverviewPageFuncs.attemptLogout(cy, loginData.url);\nindexPageFuncs.assertLoginPageUrl(cy);",
+              "err": {},
+              "uuid": "053bc6a6-0401-45e8-aa28-06e0b7b20bac",
+              "parentUUID": "ca69ec88-8d7f-4ae0-96f8-4e02f6b58c80",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC 2: Attempt login using incorrect login data",
+              "fullTitle": "Assigment 01 Test Suite TC 2: Attempt login using incorrect login data",
+              "timedOut": null,
+              "duration": 1581,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Pre-condition: browser navigated to http://localhost:3000/login\nindexPageFuncs.gotoLoginPageUrl(cy); // Perform login attempt using incorrect data \nindexPageFuncs.attemptLogin(cy, loginData.username, loginData.incorrectPassword);\nindexPageFuncs.assertErrMsgBoxAndContent(cy, loginData.failedLogInMessage); // After-condition: user still at the log in page\nindexPageFuncs.assertLoginPageUrl(cy);",
+              "err": {},
+              "uuid": "9f3ad706-de5b-4948-9dc9-fc4f392943c7",
+              "parentUUID": "ca69ec88-8d7f-4ae0-96f8-4e02f6b58c80",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "053bc6a6-0401-45e8-aa28-06e0b7b20bac",
+            "9f3ad706-de5b-4948-9dc9-fc4f392943c7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3407,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

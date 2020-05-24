@@ -8,7 +8,7 @@ const usernameTextfield = ':nth-child(1) > input';
 const passwordTextfield = ':nth-child(2) > input';
 const loginBtn = '.btn';
 
-const errMsgBox  = '#app > div > div'; 
+const errMsgBox  = '#app > .container.small > .error'; 
 
 /* Trigger pre-condition: go to login page and assert url */
 function gotoLoginPageUrl(cy){
